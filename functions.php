@@ -2,7 +2,7 @@
 /**
  * Main functions template
  *
- * @package ViteWP
+ * @package Minerva Web Development
  */
 
 /**
@@ -10,6 +10,7 @@
  */
 require_once get_stylesheet_directory() . '/utils/utils.php';
 require_once get_stylesheet_directory() . '/utils/load-scripts.php';
+require_once get_stylesheet_directory() . '/theme/editor.php';
 
 
 /**

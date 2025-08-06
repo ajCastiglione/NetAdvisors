@@ -2,10 +2,40 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-.btn {
-    @apply px-4 py-2 rounded transition;
+/* Font families */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap");
+
+* {
+    @apply font-sans font-light;
+}
+body {
+	overflow-x: hidden;
+}
+
+.btn,
+.menu-item a {
+    @apply inline-block font-normal px-4 py-2 rounded transition text-blueDark bg-accent hover:bg-blueLight focus:outline-none focus:ring-2 focus:to-blueLight;
 }
 
 .container {
-	@apply max-w-screen-xl mx-auto px-4;
+    @apply max-w-screen-xl mx-auto px-4;
+}
+
+h1 {
+    @apply text-3xl md:text-4xl lg:text-6xl font-light mb-4 text-blueLight lg:leading-[120%];
+}
+h1 strong {
+    @apply text-accent font-light;
+}
+
+h4 {
+    @apply text-base uppercase text-accent;
+}
+
+img {
+    @apply max-w-full h-auto;
+}
+
+p {
+    @apply text-xl mb-3 md:mb-4 lg:mb-6;
 }

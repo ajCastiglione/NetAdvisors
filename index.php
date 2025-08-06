@@ -2,7 +2,7 @@
 /**
  * Main index file for the theme.
  *
- * @package ViteWP
+ * @package Minerva Web Development
  */
 
 get_header();

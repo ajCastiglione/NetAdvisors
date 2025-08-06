@@ -2,7 +2,7 @@
 /**
  * Header template
  *
- * @package ViteWP
+ * @package Minerva Web Development
  */
 
 ?>

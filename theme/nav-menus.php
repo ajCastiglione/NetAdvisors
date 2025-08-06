@@ -2,11 +2,11 @@
 /**
  * Registers nav menus here.
  *
- * @package ViteWP
+ * @package Minerva Web Development
  */
 
 register_nav_menus(
 	array(
-		'main-nav' => __( 'The Main Menu', 'ViteWP' ),
+		'main-nav' => __( 'The Main Menu', 'mwd' ),
 	)
 );
