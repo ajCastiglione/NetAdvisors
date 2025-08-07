@@ -15,13 +15,13 @@ if ( ! $logo ) {
 
 ?>
 
-<div class="header bg-blueDark">
+<div class="bg-blueDark">
 
-	<div class="header__inner container flex flex-col md:flex-row justify-between items-center py-4 lg:py-8">
+	<div class="container flex flex-row justify-between items-center py-4 lg:py-8">
 
-		<div class="mb-4 md:mb-0">
-			<a class="header__logo" href="<?php echo esc_url( home_url() ); ?>" rel="nofollow">
-				<img src="<?php echo esc_url( $logo['url'] ); ?>" alt="<?php echo esc_attr( $logo['alt'] ); ?>" class="max-w-xs">
+		<div>
+			<a href="<?php echo esc_url( home_url() ); ?>" rel="nofollow">
+				<img src="<?php echo esc_url( $logo['url'] ); ?>" alt="<?php echo esc_attr( $logo['alt'] ); ?>" class="max-w-[175px] md:max-w-xs m-0">
 			</a>
 		</div>
 

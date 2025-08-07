@@ -78,6 +78,19 @@ function mwd_acf_option_init() {
 				),
 			)
 		);
+		acf_register_block_type(
+			array(
+				'name'            => 'content-media',
+				'title'           => __( 'Content & Media' ),
+				'description'     => __( 'Displays a title, media, and content section with a choice of background color' ),
+				'render_callback' => 'render_callback',
+				'category'        => 'layout',
+				'icon'            => 'media-document',
+				'align'           => 'wide',
+				'keywords'        => array( 'content', 'media' ),
+				'mode'            => 'edit',
+			)
+		);
 	}
 }
 add_action( 'acf/init', 'mwd_acf_option_init' );

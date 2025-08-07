@@ -8,7 +8,21 @@ module.exports = {
         "./safelist.txt",
         "*.css",
     ],
-    safelist: ["text-center", "bg-blueDark", "bg-blueLight", "bg-blueMid", "bg-accent"],
+    safelist: [
+        "text-center",
+        "bg-blueDark",
+        "bg-blueLight",
+        "bg-blueMid",
+        "bg-accent",
+        "flex",
+        "flex-row",
+        "flex-row-reverse",
+        "flex-col",
+        "items-center",
+        "justify-center",
+        "md:flex-row",
+        "md:flex-row-reverse",
+    ],
     theme: {
         extend: {
             maxWidth: {

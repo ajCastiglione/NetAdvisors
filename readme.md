@@ -1,14 +1,14 @@
-# Vite WP Start Theme
+# NetAdvisors WordPress Theme
 
 ## Overview
 
-This is a simple WordPress theme that provides the bare-bones to get started. It includes a vite configuration file, tailwindcss, and a few other plugins to get you started. 
+This is the NetAdvisors WordPress theme, designed to provide a modern and responsive layout for showcasing services and content effectively. The theme includes custom blocks, styles, and scripts to enhance the user experience.
 
 ## Requirements
 
 * WordPress 6+
-* PHP 7.4+
-* Node v16.13.0+
+* PHP 8+
+* Node v20+
 
 ## Installation
 
