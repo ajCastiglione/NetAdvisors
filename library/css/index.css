@@ -8,6 +8,9 @@
 * {
     @apply font-sans font-light;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     overflow-x: hidden;
 }
@@ -107,4 +110,12 @@ p {
 }
 .contact .gform_wrapper.gravity-theme .gform_footer input[type="submit"] {
     @apply bg-accent text-blueDark font-normal px-6 py-3 rounded hover:bg-blueLight focus:outline-none focus:ring-2 focus:to-blueLight cursor-pointer;
+}
+
+/* Footer */
+.footer a {
+    @apply text-white hover:text-accent transition text-base mb-1 block text-wrap break-words;
+}
+.footer p {
+    @apply m-0;
 }

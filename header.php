@@ -37,7 +37,7 @@
 
 <body <?php body_class(); ?>>
 
-	<div id="container">
+	<div id="top">
 
 		<header class="header">
 

@@ -40,6 +40,7 @@ module.exports = {
             animation: {
                 "pulse-slow": "pulse-slow 4s ease-in-out infinite",
                 "rotate-slow": "rotate-slow 6s ease-in-out infinite",
+                "up-and-down": "up-and-down 3s ease-in-out infinite",
             },
             keyframes: {
                 "pulse-slow": {
@@ -50,6 +51,10 @@ module.exports = {
                     "0%": { transform: "rotate(-2deg)" },
                     "50%": { transform: "rotate(2deg)" },
                     "100%": { transform: "rotate(-2deg)" },
+                },
+                "up-and-down": {
+                    "0%, 100%": { transform: "translateY(0)" },
+                    "50%": { transform: "translateY(-10%)" },
                 },
             },
         },

@@ -6,7 +6,7 @@
  */
 
 // Create id attribute allowing for custom "anchor" value.
-$block_id = 'contact-block';
+$block_id = 'contact';
 
 // Create class attribute allowing for custom "className" and "align" values.
 $class_name = 'contact';
