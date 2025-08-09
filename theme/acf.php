@@ -117,6 +117,19 @@ function mwd_acf_option_init() {
 				'mode'            => 'edit',
 			)
 		);
+		acf_register_block_type(
+			array(
+				'name'            => 'testimonials',
+				'title'           => __( 'Testimonials Slider' ),
+				'description'     => __( 'Slider block for displaying testimonials.' ),
+				'render_callback' => 'render_callback',
+				'category'        => 'layout',
+				'icon'            => 'slides',
+				'align'           => 'wide',
+				'keywords'        => array( 'testimonials' ),
+				'mode'            => 'edit',
+			)
+		);
 	}
 }
 add_action( 'acf/init', 'mwd_acf_option_init' );

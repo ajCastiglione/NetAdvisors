@@ -2,9 +2,9 @@
 import "@/css/index.css";
 
 // Load components
-import Nav from "./components/Nav";
+import Slider from "./components/Slider";
 
 ( function ( $ ) {
-    // Run the nav component.
-    Nav();
+    // Run the slider component.
+    Slider( $ );
 } )( jQuery );

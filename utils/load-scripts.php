@@ -23,3 +23,29 @@ function load_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'load_scripts' );
+
+/**
+ * Enqueue scripts and styles for slick slider.
+ */
+function mwd_register_slick_slider() {
+	wp_register_script(
+		'slick-slider-js',
+		'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js',
+		array( 'jquery' ),
+		'1.9.0',
+		true
+	);
+	wp_register_style(
+		'slick-slider-css',
+		'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css',
+		array(),
+		'1.9.0'
+	);
+	wp_register_style(
+		'slick-slider-theme-css',
+		'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css',
+		array(),
+		'1.9.0'
+	);
+}
+add_action( 'wp_enqueue_scripts', 'mwd_register_slick_slider' );

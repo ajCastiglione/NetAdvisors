@@ -25,11 +25,11 @@ body {
     @apply text-blueLight text-4xl lg:text-6xl lg:leading-[120%];
 }
 .hero-content h1 strong {
-    @apply text-accent font-light;
+    @apply text-accent font-extralight;
 }
 
 h1 {
-    @apply lg:text-6xl font-light mb-4 lg:leading-[120%];
+    @apply lg:text-6xl font-extralight mb-4 lg:leading-[120%];
 }
 
 h4 {
@@ -44,18 +44,20 @@ p {
     @apply md:text-xl mb-3 md:mb-4 lg:mb-6;
 }
 
+/* Content blocks */
 .content-media .title h4 {
     @apply text-blueDark font-medium tracking-widest;
 }
 
 .content-block h2,
 .content-block h3 {
-    @apply text-blueLight text-4xl lg:text-5xl mb-4 lg:mb-8;
+    @apply text-blueLight text-4xl lg:text-6xl mb-4 lg:mb-8 font-extralight;
 }
 .content-block p {
     @apply max-w-3xl m-auto;
 }
 
+/* Radial content block */
 .radial-content .radial-content-section {
     @apply p-4 text-center lg:text-left lg:h-[10.5rem] flex flex-col justify-center 2xl:h-[16.5rem] text-white lg:text-black;
 }
@@ -79,8 +81,16 @@ p {
     @apply lg:bg-blueMid;
 }
 .radial-content p {
-    @apply m-0 text-base 2xl:text-xl ;
+    @apply m-0 text-base 2xl:text-xl;
 }
 .radial-content h3 {
     @apply text-xl 2xl:text-2xl font-semibold text-accent lg:text-black;
+}
+
+/* sliders */
+[data-slider] .slick-slide {
+    @apply mx-6;
+}
+[data-slider] .slick-list {
+    @apply pt-8;
 }

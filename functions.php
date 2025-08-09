@@ -65,4 +65,11 @@ require get_stylesheet_directory() . '/theme/nav-menus.php';
 /**
  * Load ACF configurations.
  */
-require get_stylesheet_directory() . '/theme/acf.php';
+if ( class_exists( 'ACF' ) ) {
+	require get_stylesheet_directory() . '/theme/acf.php';
+}
+
+/**
+ * Load custom post types.
+ */
+require get_stylesheet_directory() . '/theme/post-types.php';
