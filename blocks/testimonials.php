@@ -38,14 +38,14 @@ wp_enqueue_style( 'slick-slider-theme-css' );
 
 ?>
 
-<section id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $class_name ); ?> bg-blueLight py-10 lg:py-16">
+<section id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $class_name ); ?> bg-blueLight py-10 lg:py-16 lg:pb-24">
 	<div class="container">
 		<h2 class="text-center lg:text-6xl font-extralight mb-8"><?php echo esc_html( $block_title ); ?></h2>
 		<?php if ( ! empty( $intro ) ) : ?>
 			<p class="text-center m-auto mb-12 max-w-4xl"><?php echo wp_kses_post( $intro ); ?></p>
 		<?php endif; ?>
 
-		<div class="relative px-24" data-slider-container>
+		<div class="relative md:px-24" data-slider-container>
 			<div class="arrow-left absolute top-1/2 left-0 transform -translate-y-1/2 z-10 cursor-pointer" data-slider-prev>
 				<img class="rotate-180" src="<?php echo esc_url( $arrow ); ?>" alt="Arrow Left">
 			</div>

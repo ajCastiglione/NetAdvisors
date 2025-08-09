@@ -130,6 +130,19 @@ function mwd_acf_option_init() {
 				'mode'            => 'edit',
 			)
 		);
+		acf_register_block_type(
+			array(
+				'name'            => 'contact',
+				'title'           => __( 'Contact Form' ),
+				'description'     => __( 'Block for displaying a contact form.' ),
+				'render_callback' => 'render_callback',
+				'category'        => 'layout',
+				'icon'            => 'external',
+				'align'           => 'wide',
+				'keywords'        => array( 'contact' ),
+				'mode'            => 'edit',
+			)
+		);
 	}
 }
 add_action( 'acf/init', 'mwd_acf_option_init' );
@@ -150,3 +163,27 @@ function render_callback( $block ) {
 		require $path;
 	}
 }
+
+/**
+ * Prepopulate the ACF contact block 'form' field with Gravity Form IDs.
+ *
+ * @param array $field The ACF field array.
+ * @return array The modified ACF field array.
+ */
+function populate_gravity_forms( $field ) {
+	// Reset choices.
+	$field['choices'] = array();
+
+	// Get all Gravity Forms.
+	$forms = GFAPI::get_forms();
+
+	// Loop through each form and add it to the choices.
+	if ( ! empty( $forms ) ) {
+		foreach ( $forms as $form ) {
+			$field['choices'][ $form['id'] ] = $form['title'];
+		}
+	}
+
+	return $field;
+}
+add_filter( 'acf/load_field/name=form', 'populate_gravity_forms' );

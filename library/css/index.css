@@ -94,3 +94,17 @@ p {
 [data-slider] .slick-list {
     @apply pt-8;
 }
+
+/* contact forms */
+.contact .gform_wrapper.gravity-theme .gfield_label,
+.contact .gform_wrapper.gravity-theme .gform-field-label {
+    @apply text-accent text-lg mb-2 font-extralight;
+}
+.contact .gform_wrapper.gravity-theme .ginput_container input,
+.contact .gform_wrapper.gravity-theme .ginput_container select,
+.contact .gform_wrapper.gravity-theme .ginput_container textarea {
+    @apply bg-blueMid text-white py-3 px-4 placeholder:text-white placeholder:opacity-70;
+}
+.contact .gform_wrapper.gravity-theme .gform_footer input[type="submit"] {
+    @apply bg-accent text-blueDark font-normal px-6 py-3 rounded hover:bg-blueLight focus:outline-none focus:ring-2 focus:to-blueLight cursor-pointer;
+}
