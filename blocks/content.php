@@ -34,6 +34,6 @@ $dots     = get_stylesheet_directory_uri() . '/library/images/NA-About-Dots.png'
 				?>
 			</div>
 		</div>
-		<img class="absolute w-14 -top-28 right-0 z-[1] pointer-events-none hidden lg:block" src="<?php echo esc_url( $dots ); ?>" alt="Dots">
+		<img class="absolute w-14 -top-28 right-3 xl:right-0 z-[1] pointer-events-none hidden lg:block" src="<?php echo esc_url( $dots ); ?>" alt="Dots">
 	</div>
 </section>

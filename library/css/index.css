@@ -53,5 +53,34 @@ p {
     @apply text-blueLight text-4xl lg:text-5xl mb-4 lg:mb-8;
 }
 .content-block p {
-	@apply max-w-3xl m-auto
+    @apply max-w-3xl m-auto;
+}
+
+.radial-content .radial-content-section {
+    @apply p-4 text-center lg:text-left lg:h-[10.5rem] flex flex-col justify-center 2xl:h-[16.5rem] text-white lg:text-black;
+}
+
+.radial-content .radial-content-section.right-half {
+    @apply lg:pl-48 2xl:pl-80;
+}
+.radial-content .radial-content-section.left-half {
+    @apply lg:pr-48 2xl:pr-80;
+}
+.radial-content .radial-content-section.left-half:nth-of-type(1),
+.radial-content .radial-content-section.right-half:nth-of-type(3) {
+    @apply lg:bg-accent;
+}
+.radial-content .radial-content-section.left-half:nth-of-type(2),
+.radial-content .radial-content-section.right-half:nth-of-type(1) {
+    @apply lg:bg-blueLight;
+}
+.radial-content .radial-content-section.left-half:nth-of-type(3),
+.radial-content .radial-content-section.right-half:nth-of-type(2) {
+    @apply lg:bg-blueMid;
+}
+.radial-content p {
+    @apply m-0 text-base 2xl:text-xl ;
+}
+.radial-content h3 {
+    @apply text-xl 2xl:text-2xl font-semibold text-accent lg:text-black;
 }

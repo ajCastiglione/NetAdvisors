@@ -13,7 +13,7 @@
  */
 function mwd_acf_json_save_point( $path ) {
 	// update path.
-	$path = get_stylesheet_directory() . '/assets/acf-json';
+	$path = get_stylesheet_directory() . '/library/acf-json';
 
 	// return.
 	return $path;
@@ -31,7 +31,7 @@ function mwd_acf_json_load_point( $paths ) {
 	unset( $paths[0] );
 
 	// append path.
-	$paths[] = get_stylesheet_directory() . '/assets/acf-json';
+	$paths[] = get_stylesheet_directory() . '/library/acf-json';
 
 	// return.
 	return $paths;
@@ -101,6 +101,19 @@ function mwd_acf_option_init() {
 				'icon'            => 'media-text',
 				'align'           => 'wide',
 				'keywords'        => array( 'content' ),
+				'mode'            => 'edit',
+			)
+		);
+		acf_register_block_type(
+			array(
+				'name'            => 'radial-content',
+				'title'           => __( 'Radial Content' ),
+				'description'     => __( 'Radial content that matches the center image. Specific to the image used at time of development.' ),
+				'render_callback' => 'render_callback',
+				'category'        => 'layout',
+				'icon'            => 'image-filter',
+				'align'           => 'wide',
+				'keywords'        => array( 'radial content' ),
 				'mode'            => 'edit',
 			)
 		);

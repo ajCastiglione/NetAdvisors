@@ -27,7 +27,7 @@ $secondary_icons = get_stylesheet_directory_uri() . '/library/images/NA-Intro-Ic
 
 ?>
 
-<section id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $class_name ); ?> bg-<?php echo esc_attr( $bg_color ); ?> text-white">
+<section id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $class_name ); ?> bg-<?php echo esc_attr( $bg_color ); ?> text-white overflow-x-hidden">
 	<div class="hero-content container flex flex-col md:flex-row items-center gap-12 md:gap-6 py-10 lg:py-16">
 		<div class="hero-text md:w-2/5 w-full">
 			<?php echo wp_kses_post( $content ); ?>
