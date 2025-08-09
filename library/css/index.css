@@ -47,3 +47,11 @@ p {
 .content-media .title h4 {
     @apply text-blueDark font-medium tracking-widest;
 }
+
+.content-block h2,
+.content-block h3 {
+    @apply text-blueLight text-4xl lg:text-5xl mb-4 lg:mb-8;
+}
+.content-block p {
+	@apply max-w-3xl m-auto
+}

@@ -91,6 +91,19 @@ function mwd_acf_option_init() {
 				'mode'            => 'edit',
 			)
 		);
+		acf_register_block_type(
+			array(
+				'name'            => 'content',
+				'title'           => __( 'Content' ),
+				'description'     => __( 'Content block with a choice of background color' ),
+				'render_callback' => 'render_callback',
+				'category'        => 'layout',
+				'icon'            => 'media-text',
+				'align'           => 'wide',
+				'keywords'        => array( 'content' ),
+				'mode'            => 'edit',
+			)
+		);
 	}
 }
 add_action( 'acf/init', 'mwd_acf_option_init' );

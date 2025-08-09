@@ -27,7 +27,7 @@ $secondary_icons = get_stylesheet_directory_uri() . '/library/images/NA-About-Ic
 
 ?>
 
-<section id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $class_name ); ?> bg-blueMid text-white py-10 lg:py-16">
+<section id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $class_name ); ?> bg-blueMid text-white py-16 lg:py-20">
 	<div class="container">
 		<div class="title text-5xl mb-20 md:mb-18">
 			<?php

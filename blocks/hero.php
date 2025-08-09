@@ -34,7 +34,7 @@ $secondary_icons = get_stylesheet_directory_uri() . '/library/images/NA-Intro-Ic
 		</div>
 		<?php if ( $image ) : ?>
 			<div class="hero-image md:w-3/5 w-full relative pb-24 md:pb-28 lg:pb-40 z-[1]">
-				<img class="relative z-10 w-[90%] md:w-full -right-10 animate-pulse-slow" src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>">
+				<img class="relative z-10 w-[90%] lg:w-full -right-10 animate-pulse-slow" src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>">
 				<img class="absolute top-0 right-0 max-h-full z-[1]" src="<?php echo esc_url( $img_underlay ); ?>" alt="Image underlay">
 				<img class="absolute w-14 md:w-20 bottom-[5%] right-[52%] z-[1] pointer-events-none" src="<?php echo esc_url( $dots ); ?>" alt="Dots">
 				<img class="absolute w-10 md:w-20 bottom-[5%] right-0 z-[1] pointer-events-none" src="<?php echo esc_url( $secondary_icons ); ?>" alt="Secondary Icons">
