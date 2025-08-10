@@ -19,6 +19,9 @@ body {
 .menu-item a {
     @apply inline-block font-normal px-4 py-2 rounded transition text-blueDark bg-accent hover:bg-blueLight focus:outline-none focus:ring-2 focus:to-blueLight;
 }
+.btn-blue {
+    @apply bg-blueDark text-white hover:bg-accent hover:text-blueDark focus:ring-2 focus:ring-accent;
+}
 
 .container {
     @apply max-w-screen-xl mx-auto px-4;
@@ -118,4 +121,16 @@ p {
 }
 .footer p {
     @apply m-0;
+}
+
+/* Pagination */
+.page-numbers {
+    @apply flex items-center justify-center mt-8 mb-4 gap-1;
+}
+.page-numbers li a,
+.page-numbers li span {
+    @apply inline-block cursor-pointer m-0 px-3 py-2 bg-blueMid text-white rounded hover:bg-blueDark focus:outline-none focus:ring-2 focus:ring-accent;
+}
+.page-numbers li .current {
+    @apply bg-accent text-blueDark font-semibold cursor-default hover:bg-accent;
 }

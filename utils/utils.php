@@ -43,3 +43,27 @@ function add_type_attribute( $tag, $handle, $src ) {
 	return $tag;
 }
 add_filter( 'script_loader_tag', 'add_type_attribute', 10, 3 );
+
+/**
+ * Pagination.
+ *
+ * @param WP_Query $query The WP_Query object.
+ * @return void
+ */
+function mwd_pagination( $query ) {
+	if ( ! $query->max_num_pages || $query->max_num_pages < 2 ) {
+		return;
+	}
+	$big             = 999999999; // An unlikely integer.
+	$pagination_args = array(
+		'base'      => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+		'format'    => get_option( 'permalink_structure' ) ? 'page/%#%/' : '&paged=%#%',
+		'current'   => max( 1, get_query_var( 'paged' ) ),
+		'total'     => $query->max_num_pages,
+		'mid_size'  => 2,
+		'type'      => 'list',
+		'prev_text' => __( '&laquo; Previous', 'textdomain' ),
+		'next_text' => __( 'Next &raquo;', 'textdomain' ),
+	);
+	echo wp_kses_post( paginate_links( $pagination_args ) );
+}
