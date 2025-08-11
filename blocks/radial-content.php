@@ -39,6 +39,7 @@ if ( $content_sections ) {
 					foreach ( $left_sections as $section ) :
 						echo '<div class="radial-content-section left-half">';
 						echo wp_kses_post( $section['content'] );
+						echo '<a href="#contact" class="btn btn-blue opacity-0 inline-block mt-2 hover:bg-blueDark hover:text-white">Contact Us</a>';
 						echo '</div>';
 					endforeach;
 				endif;
@@ -53,6 +54,7 @@ if ( $content_sections ) {
 					foreach ( $right_sections as $section ) :
 						echo '<div class="radial-content-section right-half">';
 						echo wp_kses_post( $section['content'] );
+						echo '<a href="#contact" class="btn btn-blue opacity-0 inline-block mt-2 hover:bg-blueDark hover:text-white">Contact Us</a>';
 						echo '</div>';
 					endforeach;
 				endif;

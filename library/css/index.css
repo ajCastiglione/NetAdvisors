@@ -67,7 +67,9 @@ p {
 .radial-content .radial-content-section {
     @apply p-4 text-center lg:text-left lg:h-[10.5rem] flex flex-col justify-center 2xl:h-[16.5rem] text-white lg:text-black;
 }
-
+.radial-content-section:hover .btn {
+	@apply opacity-100;
+}
 .radial-content .radial-content-section.right-half {
     @apply lg:pl-48 2xl:pl-80;
 }
