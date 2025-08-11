@@ -33,6 +33,7 @@ module.exports = {
                 blueLight: "#a7dde2",
                 blueMid: "#13b1ca",
                 blueDark: "#112b4e",
+                gray: "#f5f5f5",
             },
             fontFamily: {
                 sans: ["Poppins"],

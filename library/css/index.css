@@ -17,7 +17,7 @@ body {
 
 .btn,
 .menu-item a {
-    @apply inline-block font-normal px-4 py-2 rounded transition text-blueDark bg-accent hover:bg-blueLight focus:outline-none focus:ring-2 focus:to-blueLight;
+    @apply inline-block font-normal px-4 py-2 rounded transition text-blueDark bg-accent hover:bg-blueLight focus:outline-none focus:ring-2 focus:to-blueLight cursor-pointer;
 }
 .btn-blue {
     @apply bg-blueDark text-white hover:bg-accent hover:text-blueDark focus:ring-2 focus:ring-accent;
@@ -133,4 +133,21 @@ p {
 }
 .page-numbers li .current {
     @apply bg-accent text-blueDark font-semibold cursor-default hover:bg-accent;
+}
+
+/* Blog singles */
+.single .post-content h2 {
+    @apply text-5xl lg:text-6xl mb-4 font-extralight text-blueDark;
+}
+.single .post-content h3 {
+    @apply text-4xl lg:text-5xl mb-4 font-extralight text-blueDark;
+}
+.single .post-content h4 {
+    @apply text-3xl lg:text-4xl mb-4 font-extralight text-blueDark;
+}
+.single .post-content h5 {
+    @apply text-2xl lg:text-3xl mb-4 font-extralight text-blueDark;
+}
+.single .post-content h6 {
+    @apply text-xl lg:text-2xl mb-4 font-extralight text-blueDark;
 }
