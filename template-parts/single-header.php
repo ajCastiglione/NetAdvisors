@@ -5,7 +5,7 @@
  * @package Minerva Web Development
  */
 
-$header_classes = 'archive-header bg-blueDark py-10 lg:py-16 mb-12 relative overflow-y-hidden';
+$container_classes = 'container relative py-10 lg:py-16';
 if ( isset( $args ) ) {
 	$header_title  = $args['title'] ?? '';
 	$subtitle      = $args['subtitle'] ?? '';
@@ -13,14 +13,14 @@ if ( isset( $args ) ) {
 	$use_thumbnail = $args['use_thumbnail'] ?? false;
 
 	if ( $use_thumbnail ) {
-		$header_classes .= ' pb-0 lg:pb-1';
+		$container_classes .= ' pb-0 lg:pb-1';
 	}
 }
 
 ?>
-<header class="<?php echo esc_attr( $header_classes ); ?>">
+<header class="archive-header bg-blueDark relative overflow-y-hidden">
 
-	<div class="container">
+	<div class="<?php echo esc_attr( $container_classes ); ?>">
 		<h4 class="text-accent uppercase mb-4"><?php echo esc_html( $header_title ); ?></h4>
 		<h1 class="text-blueLight"><?php echo wp_kses_post( $subtitle ); ?></h1>
 		<p class="text-white"><?php echo wp_kses_post( $body_text ); ?></p>
@@ -32,7 +32,9 @@ if ( isset( $args ) ) {
 		<?php if ( $use_thumbnail ) : ?>
 			<img src="<?php echo esc_url( get_the_post_thumbnail_url( get_the_ID(), 'full' ) ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>" class="w-full h-full relative z-10 mt-8">
 		<?php endif; ?>
+
+		<div class="hidden lg:block top-0 -left-4 border-l-2 border-accent w-1 h-full absolute"></div>
+		<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/library/images/NA-Icon-Line-BG.png' ); ?>" alt="Hero Background Icon" class="absolute top-0 right-0 w-[50%] pointer-events-none hidden lg:block">
 	</div>
-	<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/library/images/NA-Icon-Line-BG.png' ); ?>" alt="Hero Background Icon" class="absolute top-0 right-0 w-[50%] pointer-events-none hidden lg:block">
 
 </header>

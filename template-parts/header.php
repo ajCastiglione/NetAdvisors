@@ -17,7 +17,7 @@ if ( ! $logo ) {
 
 <div class="bg-blueDark">
 
-	<div class="container flex flex-row justify-between items-center py-4 lg:py-8">
+	<div class="relative container flex flex-row justify-between items-center py-4 lg:py-8">
 
 		<div>
 			<a href="<?php echo esc_url( home_url() ); ?>" rel="nofollow">
@@ -41,6 +41,8 @@ if ( ! $logo ) {
 				?>
 			</nav>
 		</div>
+
+		<div class="hidden lg:block top-1/2 -left-4 border-l-2 border-accent w-1 h-1/2 absolute"></div>
 	</div>
 
 </div>

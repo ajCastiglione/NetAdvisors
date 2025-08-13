@@ -32,21 +32,26 @@ global $wp_query;
 		);
 		?>
 
-		<div class="grid grid-cols-3 gap-6 lg:gap-8 mb-12 container">
-			<?php
-			if ( have_posts() ) :
-				while ( have_posts() ) :
-					the_post();
-					get_template_part( 'template-parts/card' );
-				endwhile;
-				wp_reset_postdata();
-			else :
-				get_template_part( 'template-parts/content', 'none' );
-			endif;
-			?>
-		</div>
-		<div class="container">
-			<?php mwd_pagination( $wp_query ); ?>
+		<div class="relative container py-12">
+			<div class="grid grid-cols-3 gap-6 lg:gap-8 mb-12">
+				<?php
+				if ( have_posts() ) :
+					while ( have_posts() ) :
+						the_post();
+						get_template_part( 'template-parts/card' );
+					endwhile;
+					wp_reset_postdata();
+				else :
+					get_template_part( 'template-parts/content', 'none' );
+				endif;
+				?>
+			</div>
+			<div>
+				<?php mwd_pagination( $wp_query ); ?>
+			</div>
+
+			<div class="hidden lg:block top-0 -left-4 border-l-2 border-accent w-1 h-[70%] absolute"></div>
+			<div class="hidden lg:block top-[75%] -left-[4.5rem] absolute -rotate-90 text-blueDark font-semibold">Making IT Easy</div>
 		</div>
 		<?php
 		if ( ! empty( $blocks ) ) :

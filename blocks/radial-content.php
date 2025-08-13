@@ -39,14 +39,14 @@ if ( $content_sections ) {
 					foreach ( $left_sections as $section ) :
 						echo '<div class="radial-content-section left-half">';
 						echo wp_kses_post( $section['content'] );
-						echo '<a href="#contact" class="btn btn-blue opacity-0 inline-block mt-2 hover:bg-blueDark hover:text-white">Contact Us</a>';
+						echo '<a href="#contact" class="btn btn-blue opacity-0 mt-2 hover:bg-blueDark hover:text-white">Contact Us</a>';
 						echo '</div>';
 					endforeach;
 				endif;
 				?>
 			</div>
 
-			<img src="<?php echo esc_url( $center_image['url'] ); ?>" alt="<?php echo esc_attr( $center_image['alt'] ); ?>" class="lg:w-1/3 m-auto mb-4 lg:mb-0 order-first lg:order-none lg:absolute left-1/2 top-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 z-10 max-w-[342px] 2xl:max-w-[unset]">
+			<img src="<?php echo esc_url( $center_image['url'] ); ?>" alt="<?php echo esc_attr( $center_image['alt'] ); ?>" class="lg:w-1/3 m-auto mb-4 lg:mb-0 order-first lg:order-none lg:absolute left-1/2 top-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 z-10 max-w-[342px] 2xl:max-w-[33rem]">
 
 			<div class="lg:w-1/2">
 				<?php
@@ -54,7 +54,7 @@ if ( $content_sections ) {
 					foreach ( $right_sections as $section ) :
 						echo '<div class="radial-content-section right-half">';
 						echo wp_kses_post( $section['content'] );
-						echo '<a href="#contact" class="btn btn-blue opacity-0 inline-block mt-2 hover:bg-blueDark hover:text-white">Contact Us</a>';
+						echo '<a href="#contact" class="btn btn-blue opacity-0 mt-2 hover:bg-blueDark hover:text-white">Contact Us</a>';
 						echo '</div>';
 					endforeach;
 				endif;

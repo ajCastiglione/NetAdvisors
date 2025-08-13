@@ -27,8 +27,8 @@ $secondary_icons = get_stylesheet_directory_uri() . '/library/images/NA-About-Ic
 
 ?>
 
-<section id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $class_name ); ?> bg-blueMid text-white py-16 lg:py-20">
-	<div class="container">
+<section id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $class_name ); ?> bg-blueMid text-white">
+	<div class="relative container py-16 lg:py-20">
 		<div class="title text-5xl mb-20 md:mb-18">
 			<?php
 			if ( ! empty( $content_title ) ) :
@@ -54,6 +54,10 @@ $secondary_icons = get_stylesheet_directory_uri() . '/library/images/NA-About-Ic
 				</div>
 			<?php endif; ?>
 		</div>
+
+		<div class="hidden lg:block top-0 -left-4 border-l-2 border-accent w-1 h-[70%] absolute"></div>
+		<div class="hidden lg:block top-[80%] -left-[4.5rem] absolute -rotate-90 text-blueDark font-semibold">Making IT Easy</div>
+
 
 	</div>
 </section>

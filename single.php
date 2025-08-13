@@ -22,7 +22,7 @@ $related_query = new WP_Query(
 );
 
 $use_thumbnail        = has_post_thumbnail();
-$post_content_classes = $use_thumbnail ? '-mt-96 pt-96' : '';
+$post_content_classes = $use_thumbnail ? '-mt-96 pt-[25rem]' : 'pt-6';
 $dots                 = get_stylesheet_directory_uri() . '/library/images/NA-Gray-Dots.png';
 
 ?>
@@ -43,9 +43,12 @@ $dots                 = get_stylesheet_directory_uri() . '/library/images/NA-Gra
 		);
 		?>
 
-		<section class="post-content relative bg-white mb-8 <?php echo esc_attr( $post_content_classes ); ?>">
-			<div class="container">
+		<section class="post-content relative bg-white mb-8">
+			<div class="relative container <?php echo esc_attr( $post_content_classes ); ?>">
 				<?php the_content(); ?>
+
+				<div class="hidden lg:block top-0 -left-4 border-l-2 border-accent w-1 h-[30%] absolute"></div>
+				<div class="hidden lg:block top-[39%] -left-[4.5rem] absolute -rotate-90 text-blueDark font-semibold">Making IT Easy</div>
 			</div>
 		</section>
 

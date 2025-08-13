@@ -28,7 +28,7 @@ $secondary_icons = get_stylesheet_directory_uri() . '/library/images/NA-Intro-Ic
 ?>
 
 <section id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $class_name ); ?> bg-<?php echo esc_attr( $bg_color ); ?> text-white overflow-x-hidden">
-	<div class="hero-content container flex flex-col md:flex-row items-center gap-12 md:gap-6 py-10 lg:py-16">
+	<div class="hero-content relative container flex flex-col md:flex-row items-center gap-12 md:gap-6 py-10 lg:py-16">
 		<div class="hero-text md:w-2/5 w-full">
 			<?php echo wp_kses_post( $content ); ?>
 		</div>
@@ -40,6 +40,8 @@ $secondary_icons = get_stylesheet_directory_uri() . '/library/images/NA-Intro-Ic
 				<img class="absolute w-10 md:w-20 bottom-[5%] right-0 z-[1] pointer-events-none" src="<?php echo esc_url( $secondary_icons ); ?>" alt="Secondary Icons">
 			</div>
 		<?php endif; ?>
+
+		<div class="hidden lg:block top-0 -left-4 border-l-2 border-accent w-1 h-full absolute"></div>
 	</div>
 
 	<img class="absolute max-w-[50%] top-[40%] right-0 pointer-events-none opacity-30" src="<?php echo esc_url( $hero_icons ); ?>" alt="Hero Icons">

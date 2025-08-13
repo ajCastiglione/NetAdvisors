@@ -39,14 +39,14 @@ module.exports = {
                 sans: ["Poppins"],
             },
             animation: {
-                "pulse-slow": "pulse-slow 4s ease-in-out infinite",
+                "pulse-slow": "pulse-slow 2.5s ease-in-out infinite",
                 "rotate-slow": "rotate-slow 6s ease-in-out infinite",
                 "up-and-down": "up-and-down 3s ease-in-out infinite",
             },
             keyframes: {
                 "pulse-slow": {
                     "0%, 100%": { transform: "scale(1)" },
-                    "50%": { transform: "scale(1.02)" },
+                    "50%": { transform: "scale(1.04)" },
                 },
                 "rotate-slow": {
                     "0%": { transform: "rotate(-2deg)" },

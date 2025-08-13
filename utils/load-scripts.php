@@ -19,7 +19,7 @@ function load_scripts() {
 		$script_version = filemtime( get_template_directory() . '/dist/index.js' );
 		$style_version  = filemtime( get_template_directory() . '/dist/index.css' );
 		wp_enqueue_script( 'index-scripts', get_template_directory_uri() . '/dist/index.js', array(), $script_version, true );
-		wp_enqueue_style( 'index-styles', get_template_directory_uri() . '/dist/index.css', array(), $style_version );
+		wp_enqueue_style( 'index-styles', get_template_directory_uri() . '/dist/main.css', array(), $style_version );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'load_scripts' );

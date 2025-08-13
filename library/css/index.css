@@ -68,7 +68,7 @@ p {
     @apply p-4 text-center lg:text-left lg:h-[10.5rem] flex flex-col justify-center 2xl:h-[16.5rem] text-white lg:text-black;
 }
 .radial-content-section:hover .btn {
-	@apply opacity-100;
+    @apply opacity-100;
 }
 .radial-content .radial-content-section.right-half {
     @apply lg:pl-48 2xl:pl-80;
@@ -93,6 +93,9 @@ p {
 }
 .radial-content h3 {
     @apply text-xl 2xl:text-2xl font-semibold text-accent lg:text-black;
+}
+.radial-content .btn {
+    @apply hidden xl:inline-block;
 }
 
 /* sliders */
