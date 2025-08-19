@@ -51,6 +51,10 @@ p {
 }
 
 /* Content blocks */
+.content-media h1,
+.content-media h2 {
+    @apply lg:text-6xl font-extralight mb-4 lg:leading-[120%];
+}
 .content-media .title h4 {
     @apply text-blueDark font-medium tracking-widest;
 }
@@ -95,7 +99,7 @@ p {
     @apply text-xl 2xl:text-2xl font-semibold text-accent lg:text-black;
 }
 .radial-content .btn {
-    @apply hidden xl:inline-block;
+    @apply hidden 2xl:inline-block;
 }
 
 /* sliders */
