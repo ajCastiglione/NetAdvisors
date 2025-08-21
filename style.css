@@ -8,3 +8,30 @@ Version: 1
 
 License: WTFPL
 ******************************************************************/
+
+/* Tailwind-powered custom animation */
+@layer utilities {
+  @keyframes pulse-slow {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.03); }
+  }
+  .animate-pulse-slow {
+    animation: pulse-slow 4s ease-in-out infinite;
+  }
+
+  /* Pulse is paused until the wrapper's AOS finishes */
+  .hero-pulse { 
+    animation-play-state: paused; 
+    animation-delay: 1.8s; /* 0.8s fade + 1.0s pause */
+    will-change: transform;
+  }
+  .hero-pulse-wrap.aos-animate .hero-pulse {
+    animation-play-state: running;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  [data-aos]{ opacity:1 !important; transform:none !important; transition:none !important; }
+  .hero-pulse{ animation: none !important; }
+}

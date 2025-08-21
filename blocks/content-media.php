@@ -38,7 +38,12 @@ $secondary_icons = get_stylesheet_directory_uri() . '/library/images/NA-About-Ic
 		</div>
 
 		<div class="flex flex-col-reverse md:<?php echo esc_attr( $orientation ); ?> items-center gap-12 md:gap-16">
-			<div class="md:w-2/5 w-full">
+			<div class="md:w-2/5 w-full"
+				data-aos="fade-up"
+				data-aos-delay="0"
+				data-aos-duration="700"
+				data-aos-easing="ease-out-cubic"
+				data-aos-once="true">
 				<?php
 				if ( $content ) :
 					echo wp_kses_post( $content );
@@ -47,10 +52,60 @@ $secondary_icons = get_stylesheet_directory_uri() . '/library/images/NA-About-Ic
 			</div>
 			<?php if ( $image ) : ?>
 				<div class="md:w-3/5 w-full relative z-[1]">
-					<img class="relative z-10 animate-pulse-slow w-[80%] -right-16 md:-right-28" src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>">
-					<img class="absolute top-0 left-0 max-h-full z-[1]" src="<?php echo esc_url( $img_underlay ); ?>" alt="Image underlay">
-					<img class="absolute w-8 md:w-12 -top-8 md:-top-12 left-3 md:left-10 z-[2] pointer-events-none" src="<?php echo esc_url( $dots ); ?>" alt="Dots">
-					<img class="absolute w-10 md:w-16 bottom-[15%] left-4 z-[2] pointer-events-none" src="<?php echo esc_url( $secondary_icons ); ?>" alt="Secondary Icons">
+					<!-- Underlay (subtle lead-in) -->
+					<img
+						class="absolute top-0 left-0 max-h-full z-[1]"
+						src="<?php echo esc_url( $img_underlay ); ?>"
+						alt="Image underlay"
+						data-aos="fade-right"
+						data-aos-anchor="#about"
+						data-aos-delay="240"
+						data-aos-duration="500"
+						data-aos-once="true"
+					>
+
+					<!-- Fade wrapper (AOS here) -->
+					<div
+						class="hero-pulse-wrap relative z-10 w-[80%] -right-16 md:-right-28"
+						data-aos="fade-up"
+						data-aos-anchor="#about"
+						data-aos-delay="500"
+						data-aos-duration="1000"
+						data-aos-easing="ease-out-cubic"
+						data-aos-once="true"
+					>
+						<!-- Main image (pulse lives here) -->
+						<img
+						class="hero-pulse animate-pulse-slow block w-full"
+						src="<?php echo esc_url( $image['url'] ); ?>"
+						alt="<?php echo esc_attr( $image['alt'] ); ?>"
+						decoding="async"
+						>
+					</div>
+
+					<!-- Dots (quick accent) -->
+					<img
+						class="absolute w-8 md:w-12 -top-8 md:-top-12 left-3 md:left-10 z-[2] pointer-events-none"
+						src="<?php echo esc_url( $dots ); ?>"
+						alt="Dots"
+						data-aos="fade-up"
+						data-aos-anchor="#about"
+						data-aos-delay="460"
+						data-aos-duration="450"
+						data-aos-once="true"
+					>
+
+					<!-- Secondary icon (finisher) -->
+					<img
+						class="absolute w-10 md:w-16 bottom-[15%] left-4 z-[2] pointer-events-none"
+						src="<?php echo esc_url( $secondary_icons ); ?>"
+						alt="Secondary Icons"
+						data-aos="fade-up"
+						data-aos-anchor="#about"
+						data-aos-delay="560"
+						data-aos-duration="450"
+						data-aos-once="true"
+					>
 				</div>
 			<?php endif; ?>
 		</div>

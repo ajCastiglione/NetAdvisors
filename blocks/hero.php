@@ -34,11 +34,61 @@ $secondary_icons = get_stylesheet_directory_uri() . '/library/images/NA-Intro-Ic
 		</div>
 		<?php if ( $image ) : ?>
 			<div class="hero-image md:w-3/5 w-full relative pb-24 md:pb-28 lg:pb-40 z-[1]">
-				<img class="relative z-10 w-[90%] lg:w-full -right-10 animate-pulse-slow" src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>">
-				<img class="absolute top-0 right-0 max-h-full z-[1]" src="<?php echo esc_url( $img_underlay ); ?>" alt="Image underlay">
-				<img class="absolute w-14 md:w-20 bottom-[5%] right-[52%] z-[1] pointer-events-none" src="<?php echo esc_url( $dots ); ?>" alt="Dots">
-				<img class="absolute w-10 md:w-20 bottom-[5%] right-0 z-[1] pointer-events-none" src="<?php echo esc_url( $secondary_icons ); ?>" alt="Secondary Icons">
-			</div>
+				<!-- Underlay -->
+				<img
+					class="absolute top-0 right-0 max-h-full z-[1]"
+					src="<?php echo esc_url( $img_underlay ); ?>"
+					alt="Image underlay"
+					data-aos="fade-left"
+					data-aos-anchor="#hero"
+					data-aos-delay="520"
+					data-aos-duration="700"
+					data-aos-once="true"
+				>
+
+				<!-- Fade wrapper (AOS runs here) -->
+				<div
+					class="hero-pulse-wrap relative z-10 w-[90%] lg:w-full -right-10"
+					data-aos="fade-up"
+					data-aos-anchor="#hero"
+					data-aos-delay="500"
+					data-aos-duration="1000"
+					data-aos-easing="ease-out-cubic"
+					data-aos-once="true"
+				>
+					<!-- Main image (pulse runs here) -->
+					<img
+					class="hero-pulse animate-pulse-slow block w-full"
+					src="<?php echo esc_url( $image['url'] ); ?>"
+					alt="<?php echo esc_attr( $image['alt'] ); ?>"
+					decoding="async"
+					>
+				</div>
+
+				<!-- Dots -->
+				<img
+					class="absolute w-14 md:w-20 bottom-[5%] right-[52%] z-[1] pointer-events-none"
+					src="<?php echo esc_url( $dots ); ?>"
+					alt="Dots"
+					data-aos="fade-up"
+					data-aos-anchor="#hero"
+					data-aos-delay="720"
+					data-aos-duration="500"
+					data-aos-once="true"
+				>
+
+				<!-- Secondary icon -->
+				<img
+					class="absolute w-10 md:w-20 bottom-[5%] right-0 z-[1] pointer-events-none"
+					src="<?php echo esc_url( $secondary_icons ); ?>"
+					alt="Secondary Icons"
+					data-aos="fade-up"
+					data-aos-anchor="#hero"
+					data-aos-delay="820"
+					data-aos-duration="500"
+					data-aos-once="true"
+				>
+				</div>
 		<?php endif; ?>
 
 		<div class="hidden lg:block top-0 -left-4 border-l-2 border-accent w-1 h-full absolute"></div>

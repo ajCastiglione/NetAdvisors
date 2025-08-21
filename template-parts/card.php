@@ -17,13 +17,15 @@ if ( ! $thumbnail ) {
 
 ?>
 
-<article id="post-<?php echo esc_attr( $single_id ); ?>" class="post-card border-t-8 border-accent shadow-lg bg-blueLight">
-	<a href="<?php echo esc_url( $permalink ); ?>" class="block">
-		<img src="<?php echo esc_url( $thumbnail ); ?>" alt="<?php echo esc_attr( $post_title ); ?>" class="w-full h-auto mb-4">
-		<div class="card-content p-6">
-			<h2 class="text-xl font-semibold text-blueDark mb-2"><?php echo esc_html( $post_title ); ?></h2>
-			<p class="text-blueDark"><?php echo esc_html( $excerpt ); ?></p>
-			<a href="<?php echo esc_url( $permalink ); ?>" class="btn btn-blue">Read More</a>
-		</div>
-	</a>
+
+<article id="post-<?php echo esc_attr( $single_id ); ?>" class="post-card border-t-8 border-accent shadow-lg bg-blueLight"
+         data-aos="fade-up" data-aos-delay="0" data-aos-duration="550" data-aos-easing="ease-out-cubic" data-aos-once="true">
+  <a href="<?php echo esc_url( $permalink ); ?>" class="block">
+    <img src="<?php echo esc_url( $thumbnail ); ?>" alt="<?php echo esc_attr( $post_title ); ?>" class="w-full h-auto mb-4">
+    <div class="card-content p-6">
+      <h2 class="text-xl font-semibold text-blueDark mb-2"><?php echo esc_html( $post_title ); ?></h2>
+      <p class="text-blueDark"><?php echo esc_html( $excerpt ); ?></p>
+      <a href="<?php echo esc_url( $permalink ); ?>" class="btn btn-blue">Read More</a>
+    </div>
+  </a>
 </article>
