@@ -19,7 +19,7 @@ $top_arrow    = get_stylesheet_directory_uri() . '/library/images/top-arrow.png'
 ?>
 <footer class="footer bg-blueMid py-12 relative">
 	<div class="container flex flex-row flex-wrap md:flex-nowrap justify-between items-center gap-6 lg:gap-8">
-		<div  class="w-full md:w-2/5 lg:w-3/5">
+		<div class="w-full md:w-2/5 lg:w-3/5">
 			<img class="max-w-xs" src="<?php echo esc_url( $logo['url'] ); ?>" alt="<?php echo esc_attr( $logo['alt'] ); ?>">
 		</div>
 		<div class="w-1/3 md:w-1/5">
@@ -50,25 +50,6 @@ $top_arrow    = get_stylesheet_directory_uri() . '/library/images/top-arrow.png'
 </footer>
 
 <?php wp_footer(); ?>
-
-<!-- Initiate Animate on Scroll -->
-<script>
-(function () {
-  var mobile = window.matchMedia("(max-width: 767px)").matches;
-
-  AOS.init({
-    easing: 'ease-out-cubic',
-    once: true,
-    // trigger when the section's top reaches the viewport bottom on mobile
-    anchorPlacement: mobile ? 'top-bottom' : 'top-center',
-    offset: mobile ? 120 : 80,
-    startEvent: 'DOMContentLoaded'
-  });
-
-  // If images/fonts shift layout after load, refresh positions
-  window.addEventListener('load', function(){ AOS.refresh(); });
-})();
-</script>
 
 </body>
 

@@ -21,6 +21,10 @@ function load_scripts() {
 		wp_enqueue_script( 'index-scripts', get_template_directory_uri() . '/dist/index.js', array(), $script_version, true );
 		wp_enqueue_style( 'index-styles', get_template_directory_uri() . '/dist/main.css', array(), $style_version );
 	}
+
+	// Load AOS libraries.
+	wp_enqueue_style( 'aos-css', 'https://unpkg.com/aos@2.3.1/dist/aos.css', array(), '2.3.1', 'all' );
+	wp_enqueue_script( 'aos-js', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array( 'jquery' ), '2.3.1', true );
 }
 add_action( 'wp_enqueue_scripts', 'load_scripts' );
 

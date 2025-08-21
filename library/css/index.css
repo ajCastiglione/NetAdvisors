@@ -69,7 +69,7 @@ p {
 
 /* Radial content block */
 .radial-content .radial-content-section {
-    @apply p-4 text-center lg:text-left lg:h-[10.5rem] flex flex-col justify-center 2xl:h-[16.5rem] text-white lg:text-black;
+    @apply relative p-4 text-center lg:text-left lg:h-[11rem] flex flex-col justify-center 2xl:h-[16.5rem] text-white lg:text-black;
 }
 .radial-content-section:hover .btn {
     @apply opacity-100;
@@ -93,13 +93,13 @@ p {
     @apply lg:bg-blueMid;
 }
 .radial-content p {
-    @apply m-0 text-base 2xl:text-xl;
+    @apply m-0 text-sm 2xl:text-xl;
 }
 .radial-content h3 {
-    @apply text-xl 2xl:text-2xl font-semibold text-accent lg:text-black;
+    @apply text-base 2xl:text-2xl font-semibold text-accent lg:text-black;
 }
 .radial-content .btn {
-    @apply hidden 2xl:inline-block;
+    @apply hidden text-sm py-1 lg:inline-block xl:py-2 xl:text-lg;
 }
 
 /* sliders */

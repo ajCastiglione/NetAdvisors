@@ -41,15 +41,15 @@ wp_enqueue_style( 'slick-slider-theme-css' );
 <section id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $class_name ); ?> bg-blueLight py-10 lg:py-16 lg:pb-24">
 	<div class="container">
 		<h2 class="text-center lg:text-6xl font-extralight mb-8"
-		    data-aos="fade-up" data-aos-anchor="#<?php echo esc_attr( $block_id ); ?>"
-		    data-aos-delay="0" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-once="true">
+			data-aos="fade-up" data-aos-anchor="#<?php echo esc_attr( $block_id ); ?>"
+			data-aos-delay="0" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-once="true">
 			<?php echo esc_html( $block_title ); ?>
 		</h2>
 
 		<?php if ( ! empty( $intro ) ) : ?>
 			<p class="text-center m-auto mb-12 max-w-4xl"
-			   data-aos="fade-up" data-aos-anchor="#<?php echo esc_attr( $block_id ); ?>"
-			   data-aos-delay="150" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-once="true">
+				data-aos="fade-up" data-aos-anchor="#<?php echo esc_attr( $block_id ); ?>"
+				data-aos-delay="150" data-aos-duration="600" data-aos-easing="ease-out-cubic" data-aos-once="true">
 				<?php echo wp_kses_post( $intro ); ?>
 			</p>
 		<?php endif; ?>
@@ -61,11 +61,13 @@ wp_enqueue_style( 'slick-slider-theme-css' );
 
 			<div data-slider>
 				<?php if ( $reviews ) : ?>
-					<?php foreach ( $reviews as $review ) :
-						$review_title = get_the_title( $review->ID ); ?>
+					<?php
+					foreach ( $reviews as $review ) :
+						$review_title = get_the_title( $review->ID );
+						?>
 						<div class="bg-white p-6 shadow-lg border-t-8 border-accent relative text-center"
-							 data-aos="fade-up" data-aos-anchor="#<?php echo esc_attr( $block_id ); ?>"
-							 data-aos-delay="0" data-aos-duration="500" data-aos-easing="ease-out-cubic" data-aos-once="true">
+							data-aos="fade-up" data-aos-anchor="#<?php echo esc_attr( $block_id ); ?>"
+							data-aos-delay="0" data-aos-duration="500" data-aos-easing="ease-out-cubic" data-aos-once="true">
 							<img class="w-10 absolute -top-8 left-1/2 transform -translate-x-1/2" src="<?php echo esc_attr( $icon ); ?>" alt="Quote Icon">
 							<?php if ( ! empty( get_field( 'logo', $review->ID ) ) ) : ?>
 								<img class="m-auto mb-8" src="<?php echo esc_url( get_field( 'logo', $review->ID )['url'] ); ?>" alt="<?php echo esc_attr( $review_title ); ?>">
